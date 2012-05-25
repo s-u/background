@@ -1,0 +1,11 @@
+Package: background
+Version: 0.1-1
+Title: Background processing and asynchronous callbacks
+Author: Simon Urbanek <simon.urbanek@r-project.org>
+Maintainer: Simon Urbanek <simon.urbanek@r-project.org>
+Description: This package porvides infrastructure for servicing
+	     asynchronous tasks in R while R is idle. It provides
+	     building block from steraming and other asynchnonous
+	     processing in R.
+License: GPL-2
+URL: http://www.rforge.net/background
