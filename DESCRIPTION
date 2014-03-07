@@ -8,4 +8,5 @@ Description: This package porvides infrastructure for servicing
 	     building block from steraming and other asynchnonous
 	     processing in R.
 License: GPL-2
+Suggests: parallel
 URL: http://www.rforge.net/background

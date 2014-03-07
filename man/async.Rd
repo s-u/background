@@ -44,6 +44,19 @@ async.rm(handler)
 }
 %\seealso{
 %}
-%\examples{
-%}
+\examples{
+\dontrun{
+   future = function(expr) {
+      p = parallel::mcparallel(expr)
+      async.add(p$fd[1], function(h, p) {
+         async.rm(h)
+         print(parallel::mccollect(p)[[1]])
+      }, p)
+      invisible(p)
+   }
+
+   future({ Sys.sleep(5); "done!" })
+   ## in 5 seconds you'll see an output
+}
+}
 \keyword{interface}
