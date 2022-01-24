@@ -1,5 +1,5 @@
 Package: background
-Version: 0.1-1
+Version: 0.1-2
 Title: Background processing and asynchronous callbacks
 Author: Simon Urbanek <simon.urbanek@r-project.org>
 Maintainer: Simon Urbanek <simon.urbanek@r-project.org>
