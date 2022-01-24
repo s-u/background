@@ -1,6 +1,6 @@
 /*
  *  async.c - ansynchronoud callback into R based on FD activity
- *  Copyright (C) 2012 Simon Urbanek
+ *  Copyright (C) 2012,2022 Simon Urbanek
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -88,7 +88,7 @@ static void finalize_handler(bg_conn_t *c)
 #endif
     if (c->prev) {
 	c->prev->next = c->next;
-	c->next->prev = c->prev;
+	if (c->next) c->next->prev = c->prev;
     } else if (c->next)
 	c->next->prev = 0;
     if (handlers == c)
